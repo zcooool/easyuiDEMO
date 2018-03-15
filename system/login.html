@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    </script>
+
+    //判断当前窗口是否有顶级窗口，如果有就让当前的窗口的地址栏发生变化，
+    function loadTopWindow(){
+        if (window.top!=null && window.top.document.URL!=document.URL){
+            window.top.location= document.URL; //这样就可以让登陆窗口显示在整个窗口了
+        }
+    }
+    </script>
+</head>
+<body onload="loadTopWindow()"> // 页面加载时进行判断
+    登陆页面
+</body>
+</html>
